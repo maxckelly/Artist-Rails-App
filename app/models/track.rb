@@ -1,3 +1,3 @@
 class Track < ApplicationRecord
-  has_many :artists
+  belongs_to :artist
 end

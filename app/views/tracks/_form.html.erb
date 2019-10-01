@@ -26,12 +26,12 @@
   <%= form.number_field :duration %>
 </div>
 
-<div class="field">
-  <%= form.label :artists_id %>
-  <%= form.select :artists_id, options_for_select( Artist.all.collect { |u| [u.name, u.id] }, :selected => track.artists_id) %>
-</div>
-
 <div class="actions">
   <%= form.submit %>
+</div>
+
+<div class="field">
+  <%= form.label :artist_id %>
+  <%= form.select :artist_id, options_for_select( Artist.all.collect { |u| [u.name, u.id] }, :selected => track.artist_id ) %>
 </div>
 <% end %>
